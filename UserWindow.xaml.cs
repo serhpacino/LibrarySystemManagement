@@ -23,5 +23,17 @@ namespace LibrarySystemManagement
         {
             InitializeComponent();
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            AddNewBook addb = new AddNewBook();
+            addb.Show();
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            BookViewer bv = new BookViewer();
+            bv.Show();
+        }
     }
 }

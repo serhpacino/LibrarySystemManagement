@@ -6,11 +6,16 @@
         xmlns:local="clr-namespace:LibrarySystemManagement"
         mc:Ignorable="d"
         Title="UserWindow" Height="450" Width="800">
-    <Grid>
-        
-        <Menu HorizontalAlignment="Left" Height="364" Margin="10,46,0,0" VerticalAlignment="Top" Width="774">
-            <ComboBox Width="141" Height="26"/>
+    <Grid MinWidth="793.6" MinHeight="420">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="669*"/>
+            <ColumnDefinition Width="124*"/>
+        </Grid.ColumnDefinitions>
+        <Menu Height="25" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="0,0,-0.4,0">
+            <MenuItem Header="Book">
+                <MenuItem Header="Add New" Click="MenuItem_Click"></MenuItem>
+                <MenuItem Header="View Book" Click="MenuItem_Click_1"></MenuItem>
+            </MenuItem>
         </Menu>
-
     </Grid>
 </Window>
