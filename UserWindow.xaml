@@ -16,6 +16,11 @@
                 <MenuItem Header="Add New" Click="MenuItem_Click"></MenuItem>
                 <MenuItem Header="View Book" Click="MenuItem_Click_1"></MenuItem>
             </MenuItem>
+            <MenuItem Header="Student" Width="52" RenderTransformOrigin="0.5,0.5" Click="MenuItem_Click_2">
+                <MenuItem Header="Register A Student" />
+            </MenuItem>
         </Menu>
+        
+        
     </Grid>
 </Window>

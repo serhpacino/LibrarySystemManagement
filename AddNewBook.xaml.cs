@@ -35,13 +35,14 @@ namespace LibrarySystemManagement
             cmd.CommandText = "insert into Book values('"+textbox_title.Text+"','"+textbox_author.Text+"','"+textbox_publisher.Text+"','"+datepicker_purchase.DisplayDate+"',"+textbox_price.Text+","+textbox_amount.Text+",'"+textbox_genre.Text+"')";
             cmd.ExecuteNonQuery();
             c.Close();
+            MessageBox.Show("Book: " + textbox_title.Text + " was added into library");
             textbox_title.Text = "";
             textbox_author.Text = "";
             textbox_publisher.Text = "";
             textbox_price.Text = "";
             textbox_amount.Text = "";
             textbox_genre.Text = "";
-            MessageBox.Show("Book: " + textbox_title.Text + " was added into library");
+            
         }
 
        

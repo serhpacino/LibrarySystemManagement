@@ -35,5 +35,11 @@ namespace LibrarySystemManagement
             BookViewer bv = new BookViewer();
             bv.Show();
         }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            AddStudent ast = new AddStudent();
+            ast.Show();
+        }
     }
 }

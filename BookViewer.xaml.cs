@@ -126,7 +126,7 @@ namespace LibrarySystemManagement
                     textbox_amount.Text = dr["Amount"].ToString();
                     textbox_genre.Text = dr["Genre"].ToString();
                     //DateTime Date_of_purchase = Convert.ToDateTime(dr["Date_of_purchase"].ToString());
-                    textbox_purchasedate.Text = dr["Date_of_purchase"].ToString();
+                    datepicker_purchasedate.SelectedDate = Convert.ToDateTime(dr["Date_of_purchase"].ToString());
 
                 }
                 c.Close();
@@ -146,7 +146,7 @@ namespace LibrarySystemManagement
                 c.Open();
                 SqlCommand cmd = c.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "update Book set Title ='"+textbox_title.Text+"',BookAuthor='"+textbox_author.Text+"',PublisherName='"+textbox_publisher.Text+"',Date_of_purchase='"+textbox_purchasedate.Text+"',Price ="+textbox_price.Text+",Amount="+textbox_amount.Text+",Genre='"+textbox_genre.Text+"' where id ="+id+"";
+                cmd.CommandText = "update Book set Title ='"+textbox_title.Text+"',BookAuthor='"+textbox_author.Text+"',PublisherName='"+textbox_publisher.Text+"',Date_of_purchase='"+datepicker_purchasedate.SelectedDate+"',Price ="+textbox_price.Text+",Amount="+textbox_amount.Text+",Genre='"+textbox_genre.Text+"' where id ="+id+"";
                 cmd.ExecuteNonQuery();
                 grid_updateinfo.Visibility = Visibility.Hidden;
                 c.Close();

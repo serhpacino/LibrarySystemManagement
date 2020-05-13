@@ -25,9 +25,9 @@
             <TextBox x:Name="textbox_publisher" HorizontalAlignment="Left" Height="23" Margin="147,35,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
             <TextBox x:Name="textbox_price" HorizontalAlignment="Left" Height="23" Margin="290,35,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
             <Button Content="Update" HorizontalAlignment="Left" Margin="429,37,0,0" VerticalAlignment="Top" Width="75" Height="48" Click="Button_Click_1"/>
-            <TextBox x:Name="textbox_purchasedate" HorizontalAlignment="Left" Margin="147,84,0,0" VerticalAlignment="Top" Width="120" >
+            <DatePicker x:Name="datepicker_purchasedate" HorizontalAlignment="Left" Margin="147,84,0,0" VerticalAlignment="Top" Width="120" >
                
-            </TextBox>
+            </DatePicker>
             <Label Content="Genre" HorizontalAlignment="Left" Margin="5,113,0,0" VerticalAlignment="Top"/>
             <TextBox x:Name="textbox_genre" HorizontalAlignment="Left" Height="23" Margin="0,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         </Grid>
