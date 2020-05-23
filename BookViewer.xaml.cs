@@ -109,6 +109,8 @@ namespace LibrarySystemManagement
             string id = rowview.Row[0].ToString();
             try
             {
+                dataGridBookView.Columns.Clear();
+                dataGridBookView.UpdateLayout();
                 c.Open();
                 SqlCommand cmd = c.CreateCommand();
                 cmd.CommandType = CommandType.Text;

@@ -41,5 +41,17 @@ namespace LibrarySystemManagement
             AddStudent ast = new AddStudent();
             ast.Show();
         }
+
+        private void MenuItem_Click_3(object sender, RoutedEventArgs e)
+        {
+            ViewStudent vst = new ViewStudent();
+            vst.Show();
+        }
+
+        private void MenuItem_Click_4(object sender, RoutedEventArgs e)
+        {
+            LendingBook lb = new LendingBook();
+            lb.Show();
+        }
     }
 }

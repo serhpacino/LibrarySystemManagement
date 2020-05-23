@@ -16,8 +16,12 @@
                 <MenuItem Header="Add New" Click="MenuItem_Click"></MenuItem>
                 <MenuItem Header="View Book" Click="MenuItem_Click_1"></MenuItem>
             </MenuItem>
-            <MenuItem Header="Student" Width="52" RenderTransformOrigin="0.5,0.5" Click="MenuItem_Click_2">
-                <MenuItem Header="Register A Student" />
+            <MenuItem Header="Student" Width="52" RenderTransformOrigin="0.5,0.5">
+                <MenuItem Name="registerStudent" Header="Register A Student" Click="MenuItem_Click_2" />
+                <MenuItem Name="viewStudent" Header="View A Student" Click="MenuItem_Click_3" />
+            </MenuItem>
+            <MenuItem Header="Order" Width="67" Click="MenuItem_Click_4">
+                <MenuItem Name ="lendingBook" Header="Lending a Book" ></MenuItem>
             </MenuItem>
         </Menu>
         

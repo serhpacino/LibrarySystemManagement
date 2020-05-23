@@ -37,55 +37,62 @@ namespace LibrarySystemManagement
 
         private void button_Register_Click(object sender, RoutedEventArgs e)
         {
-            
-            c.Open();
-            SqlCommand cmd = c.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            if (textbox_Email.Text.Length == 0)
+            try
             {
-                MessageBox.Show("Enter a Email");
-                textbox_Email.Focus();
-            }
-            else if (!Regex.IsMatch(textbox_Email.Text, @"^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$"))
-            {
-                MessageBox.Show("Enter a valid email");
-                textbox_Email.Select(0, textbox_Email.Text.Length);
-                textbox_Email.Focus();
-            }
-            else if (textbox_Password.Text.Length == 0)
-            {
-                MessageBox.Show("Enter a password");
-                textbox_Password.Focus();
-            }
-            else if(combobox_Specialization.Text == "Programming")
-            {
-                spec = 1;
-            }else if (combobox_Specialization.Text == "Management")
-            {
-                spec = 2;
-            }
-            else if (combobox_Specialization.Text == "Philology")
-            {
-                spec = 3;
-            }
-            else if (combobox_Specialization.Text == "Aviation")
-            {
-                spec = 4;
-            }else if(combobox_Specialization.Text == "")
-            {
-                MessageBox.Show("Enter a specialization");
-            }
-            cmd.CommandText = "insert into Student values('" + textbox_FirstName.Text + "','" + textbox_LastName.Text + "','" + textbox_Email.Text + "','" + textbox_Password.Text + "','" + textbox_PhoneNumber.Text + "','" + combobox_Semestr.Text + "'," + spec + ")";
-            cmd.ExecuteNonQuery();
-            c.Close();
-            MessageBox.Show("Student:"+textbox_FirstName.Text+","+textbox_LastName.Text+" was added successfully");
-            textbox_FirstName.Text = "";
+                c.Open();
+                SqlCommand cmd = c.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                if (textbox_Email.Text.Length == 0)
+                {
+                    MessageBox.Show("Enter a Email");
+                    textbox_Email.Focus();
+                }
+                else if (!Regex.IsMatch(textbox_Email.Text, @"^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$"))
+                {
+                    MessageBox.Show("Enter a valid email");
+                    textbox_Email.Select(0, textbox_Email.Text.Length);
+                    textbox_Email.Focus();
+                }
+                else if (textbox_Password.Text.Length == 0)
+                {
+                    MessageBox.Show("Enter a password");
+                    textbox_Password.Focus();
+                }
+                else if (combobox_Specialization.Text == "Programming")
+                {
+                    spec = 1;
+                }
+                else if (combobox_Specialization.Text == "Management")
+                {
+                    spec = 2;
+                }
+                else if (combobox_Specialization.Text == "Philology")
+                {
+                    spec = 3;
+                }
+                else if (combobox_Specialization.Text == "Aviation")
+                {
+                    spec = 4;
+                }
+                else if (combobox_Specialization.Text == "")
+                {
+                    MessageBox.Show("Enter a specialization");
+                }
+                cmd.CommandText = "insert into Student values('" + textbox_FirstName.Text + "','" + textbox_LastName.Text + "','" + textbox_Email.Text + "','" + textbox_Password.Text + "','" + textbox_PhoneNumber.Text + "','" + combobox_Semestr.Text + "'," + spec + ")";
+                cmd.ExecuteNonQuery();
+                c.Close();
+                MessageBox.Show("Student " + textbox_FirstName.Text + "  " + textbox_LastName.Text + " was added successfully");
+                textbox_FirstName.Text = "";
                 textbox_LastName.Text = "";
                 textbox_Email.Text = "";
                 textbox_Password.Text = "";
                 textbox_PhoneNumber.Text = "";
                 combobox_Semestr.Text = "";
-                
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
     }
 }

@@ -64,6 +64,9 @@
     <Compile Include="BookViewer.xaml.cs">
       <DependentUpon>BookViewer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LendingBook.xaml.cs">
+      <DependentUpon>LendingBook.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserWindow.xaml.cs">
       <DependentUpon>UserWindow.xaml</DependentUpon>
     </Compile>
@@ -79,6 +82,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BookViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LendingBook.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
