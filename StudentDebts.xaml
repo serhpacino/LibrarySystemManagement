@@ -1,0 +1,16 @@
+﻿<Window x:Class="LibrarySystemManagement.StudentDebts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibrarySystemManagement"
+        mc:Ignorable="d"
+        Title="StudentDebts" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <DataGrid x:Name="datagrid_bookinfo" HorizontalAlignment="Left" Height="169" Margin="10,35,0,0" VerticalAlignment="Top" Width="774" SelectedCellsChanged="datagrid_bookinfo_SelectedCellsChanged"/>
+        <DataGrid x:Name="datagrid_debts" HorizontalAlignment="Left" Height="169" Margin="10,241,0,0" VerticalAlignment="Top" Width="774"/>
+        <Label x:Name="label_bookinfo" Content="Book Info" HorizontalAlignment="Left" Margin="10,1,0,0" VerticalAlignment="Top" Width="125" FontSize="20" FontFamily="Arial Black"/>
+        <Label Content="Debts" HorizontalAlignment="Left" Margin="10,0,0,179" VerticalAlignment="Bottom" Width="109" FontSize="20" FontFamily="Arial Black"/>
+
+    </Grid>
+</Window>

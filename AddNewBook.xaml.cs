@@ -32,7 +32,7 @@ namespace LibrarySystemManagement
             c.Open();
             SqlCommand cmd = c.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into Book values('"+textbox_title.Text+"','"+textbox_author.Text+"','"+textbox_publisher.Text+"','"+datepicker_purchase.DisplayDate+"',"+textbox_price.Text+","+textbox_amount.Text+",'"+textbox_genre.Text+"')";
+            cmd.CommandText = "insert into Book values('"+textbox_title.Text+"','"+textbox_author.Text+"','"+textbox_publisher.Text+"','"+datepicker_purchase.Text+"',"+textbox_price.Text+","+textbox_amount.Text+",'"+textbox_genre.Text+"',"+textbox_amount.Text+")";
             cmd.ExecuteNonQuery();
             c.Close();
             MessageBox.Show("Book: " + textbox_title.Text + " was added into library");

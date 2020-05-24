@@ -53,5 +53,17 @@ namespace LibrarySystemManagement
             LendingBook lb = new LendingBook();
             lb.Show();
         }
+
+        private void returningBook_Click(object sender, RoutedEventArgs e)
+        {
+            BookReturning br = new BookReturning();
+            br.Show();
+        }
+
+        private void studentDebts_Click(object sender, RoutedEventArgs e)
+        {
+            StudentDebts sd = new StudentDebts();
+            sd.Show();
+        }
     }
 }

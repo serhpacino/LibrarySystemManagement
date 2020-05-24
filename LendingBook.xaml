@@ -15,10 +15,10 @@
         <Label x:Name="label_student_email" Content="Email" HorizontalAlignment="Left" Margin="37,238,0,0" VerticalAlignment="Top" FontSize="20" Width="305"/>
         <Label x:Name="label_student_specialization" Content="Specialization" HorizontalAlignment="Left" Margin="37,312,0,0" VerticalAlignment="Top" FontSize="20" Width="305"/>
         <Label Content="Find a Student by ID:" HorizontalAlignment="Left" Margin="37,1,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-        <Button x:Name="button_book_lending" Content="Lend a Book" HorizontalAlignment="Left" Margin="517,214,0,0" VerticalAlignment="Top" Width="241" Height="61" FontSize="18" FontWeight="Bold" Click="button_book_lending_Click"/>
+        <Button x:Name="button_book_lending" Content="Complete a Request" HorizontalAlignment="Left" Margin="517,214,0,0" VerticalAlignment="Top" Width="241" Height="61" FontSize="18" FontWeight="Bold" Click="button_book_lending_Click"/>
         <TextBox x:Name="textbox_bookname" HorizontalAlignment="Left" Height="30" Margin="517,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" FontSize="18" KeyUp="textbox_bookname_KeyUp" KeyDown="textbox_bookname_KeyDown"/>
         <Label Content="Book Name:" HorizontalAlignment="Left" Margin="393,136,0,0" VerticalAlignment="Top" Height="30" Width="124" FontWeight="Bold" FontSize="16"/>
-        <DatePicker x:Name="datepicker_orderdate" HorizontalAlignment="Left" Margin="517,71,0,0" VerticalAlignment="Top" Height="37" Width="241" FontSize="16"/>
+        <DatePicker x:Name="datepicker_orderdate" HorizontalAlignment="Left" Margin="517,71,0,0" VerticalAlignment="Top" Height="37" Width="241" FontSize="16" />
         <Label Content="Lending Date:" HorizontalAlignment="Left" Margin="393,78,0,0" VerticalAlignment="Top" Height="30" Width="124" FontWeight="Bold" FontSize="16"/>
         <ListBox x:Name="listbox_bookname" HorizontalAlignment="Left" Height="141" Margin="517,171,0,0" VerticalAlignment="Top" Width="241" FontSize="18" Visibility="Hidden" KeyDown="listbox_bookname_KeyDown" MouseDoubleClick="listbox_bookname_MouseDoubleClick"/>
 

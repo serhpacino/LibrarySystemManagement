@@ -20,8 +20,12 @@
                 <MenuItem Name="registerStudent" Header="Register A Student" Click="MenuItem_Click_2" />
                 <MenuItem Name="viewStudent" Header="View A Student" Click="MenuItem_Click_3" />
             </MenuItem>
-            <MenuItem Header="Order" Width="67" Click="MenuItem_Click_4">
-                <MenuItem Name ="lendingBook" Header="Lending a Book" ></MenuItem>
+            <MenuItem Header="Order" Width="67" >
+                <MenuItem Name ="lendingBook" Header="Lending a Book" Click="MenuItem_Click_4"></MenuItem>
+                <MenuItem Name ="returningBook" Header="Return a Book" Click="returningBook_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Debts">
+                <MenuItem Name = "studentDebts" Header="Checking Students Debs" Click="studentDebts_Click"></MenuItem>
             </MenuItem>
         </Menu>
         

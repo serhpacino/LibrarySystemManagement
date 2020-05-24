@@ -50,36 +50,7 @@ namespace LibrarySystemManagement
         private void datagrid_studentviewer_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
         {
             
-            //DataRowView rowview = datagrid_studentviewer.SelectedItem as DataRowView;
-            //string id = rowview.Row[0].ToString();
-            //try
-            //{
-            //    c.Open();
-            //    SqlCommand cmd = c.CreateCommand();
-            //    cmd.CommandType = CommandType.Text;
-            //    cmd.CommandText = "select * from Book where id =" + id + "";
-            //    cmd.ExecuteNonQuery();
-            //    DataTable dt = new DataTable();
-            //    SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            //    sda.Fill(dt);
-            //    foreach (DataRow dr in dt.Rows)
-            //    {
-            //        textbox_title.Text = dr["Title"].ToString();
-            //        textbox_author.Text = dr["BookAuthor"].ToString();
-            //        textbox_publisher.Text = dr["PublisherName"].ToString();
-            //        textbox_price.Text = dr["Price"].ToString();
-            //        textbox_amount.Text = dr["Amount"].ToString();
-            //        textbox_genre.Text = dr["Genre"].ToString();
-            //        //DateTime Date_of_purchase = Convert.ToDateTime(dr["Date_of_purchase"].ToString());
-            //        datepicker_purchasedate.SelectedDate = Convert.ToDateTime(dr["Date_of_purchase"].ToString());
-
-            //    }
-            //    c.Close();
-            //}
-            //catch (Exception exception)
-            //{
-            //    MessageBox.Show(exception.Message);
-            //}
+            
         }
 
       

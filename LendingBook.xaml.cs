@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Navigation;
 
 namespace LibrarySystemManagement
 {
@@ -22,7 +23,7 @@ namespace LibrarySystemManagement
     public partial class LendingBook : Window
     {
         SqlConnection c = new SqlConnection(@"Data Source=DESKTOP-SOMLP49;Initial Catalog=LibraryManagementDB;Integrated Security=True;Pooling=False");
-        public string bookId;
+        public int bookId=0;
         public LendingBook()
         {
             InitializeComponent();
@@ -87,7 +88,7 @@ namespace LibrarySystemManagement
                     foreach (DataRow dr in dt.Rows)
                     {
                         listbox_bookname.Items.Add(dr["Title"].ToString());
-                        bookId = dr["Id"].ToString();
+                        bookId =Convert.ToInt32( dr["Id"].ToString());
                     }
                 }
             }
@@ -121,11 +122,35 @@ namespace LibrarySystemManagement
 
         private void button_book_lending_Click(object sender, RoutedEventArgs e)
         {
-            SqlCommand cmd = c.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into BookOrder values('"+textbox_studentId.Text+"','"+bookId+"','"+datepicker_orderdate.SelectedDate+"')";
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Book Order is successfully added");
+            int available_book_amount=0;
+            SqlCommand cmd2 = c.CreateCommand();
+            cmd2.CommandType = CommandType.Text;
+            cmd2.CommandText = "select * from Book where Title ='"+textbox_bookname.Text+"'";
+            cmd2.ExecuteNonQuery();
+            DataTable dt2 = new DataTable();
+            SqlDataAdapter sda2 = new SqlDataAdapter(cmd2);
+            sda2.Fill(dt2);
+            foreach(DataRow dr2 in dt2.Rows)
+            {
+                available_book_amount = Convert.ToInt32( dr2["Available"].ToString());
+            }
+            if (available_book_amount > 0)
+            {
+
+
+                SqlCommand cmd = c.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "insert into BookOrder values('" + textbox_studentId.Text + "','" + bookId + "','"+ datepicker_orderdate.Text +"')";
+                cmd.ExecuteNonQuery();
+                SqlCommand cmd1 = c.CreateCommand();
+                cmd1.CommandType = CommandType.Text;
+                cmd1.CommandText = "update Book set Available = Available-1 where Title='" + textbox_bookname.Text + "'";
+                cmd1.ExecuteNonQuery();
+                MessageBox.Show("Book Order is successfully added");
+            }else
+            {
+                MessageBox.Show("Not available right now");
+            }
         }
     }
 }
