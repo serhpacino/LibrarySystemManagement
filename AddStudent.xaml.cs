@@ -25,7 +25,7 @@ namespace LibrarySystemManagement
     /// </summary>
     public partial class AddStudent : Window
     {
-        int spec = 0;
+        
         SqlConnection c = new SqlConnection(@"Data Source=DESKTOP-SOMLP49;Initial Catalog=LibraryManagementDB;Integrated Security=True;Pooling=False");
 
         public AddStudent()
@@ -58,36 +58,25 @@ namespace LibrarySystemManagement
                     MessageBox.Show("Enter a password");
                     textbox_Password.Focus();
                 }
-                else if (combobox_Specialization.Text == "Programming")
-                {
-                    spec = 1;
-                }
-                else if (combobox_Specialization.Text == "Management")
-                {
-                    spec = 2;
-                }
-                else if (combobox_Specialization.Text == "Philology")
-                {
-                    spec = 3;
-                }
-                else if (combobox_Specialization.Text == "Aviation")
-                {
-                    spec = 4;
-                }
-                else if (combobox_Specialization.Text == "")
+                else if (combobox_Specialization.TabIndex == 0)
                 {
                     MessageBox.Show("Enter a specialization");
+                    combobox_Specialization.Focus();
                 }
-                cmd.CommandText = "insert into Student values('" + textbox_FirstName.Text + "','" + textbox_LastName.Text + "','" + textbox_Email.Text + "','" + textbox_Password.Text + "','" + textbox_PhoneNumber.Text + "','" + combobox_Semestr.Text + "'," + spec + ")";
-                cmd.ExecuteNonQuery();
+                else
+                {
+                    cmd.CommandText = "insert into Student values('" + textbox_FirstName.Text + "','" + textbox_LastName.Text + "','" + textbox_Email.Text + "','" + textbox_Password.Text + "','" + textbox_PhoneNumber.Text + "','" + combobox_Semestr.Text + "'," + combobox_Semestr.TabIndex + ")";
+                    cmd.ExecuteNonQuery();
+                    c.Close();
+                    MessageBox.Show("Student " + textbox_FirstName.Text + "  " + textbox_LastName.Text + " was added successfully");
+                    textbox_FirstName.Text = "";
+                    textbox_LastName.Text = "";
+                    textbox_Email.Text = "";
+                    textbox_Password.Text = "";
+                    textbox_PhoneNumber.Text = "";
+                    combobox_Semestr.Text = "";
+                }
                 c.Close();
-                MessageBox.Show("Student " + textbox_FirstName.Text + "  " + textbox_LastName.Text + " was added successfully");
-                textbox_FirstName.Text = "";
-                textbox_LastName.Text = "";
-                textbox_Email.Text = "";
-                textbox_Password.Text = "";
-                textbox_PhoneNumber.Text = "";
-                combobox_Semestr.Text = "";
             }
             catch (Exception exception)
             {

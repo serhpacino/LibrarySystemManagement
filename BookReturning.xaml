@@ -5,16 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibrarySystemManagement"
         mc:Ignorable="d"
-        Title="BookReturning" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="BookReturning" Height="450" Width="800" Loaded="Window_Loaded" MinWidth="800" MinHeight="450" MaxWidth="800" MaxHeight="450">
+
     <Grid>
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/LibrarySystemManagement;component/images/background_image_3.jpg"/>
+            </Grid.Background>
+        </Grid>
         <TextBox x:Name="textbox_studentId" HorizontalAlignment="Left" Height="25" Margin="33,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"/>
-        <Button x:Name="button_search_studentbyId" Content="Search" HorizontalAlignment="Left" Margin="33,79,0,0" VerticalAlignment="Top" Width="136" Height="39" Click="button_search_studentbyId_Click"/>
-        <DataGrid x:Name="datagrid_rezervation" HorizontalAlignment="Left" Height="265" Margin="10,145,0,0" VerticalAlignment="Top" Width="774" SelectedCellsChanged="datagrid_rezervation_SelectedCellsChanged"/>
-        <Label x:Name="label_title" Content="Title" HorizontalAlignment="Left" Margin="370,37,0,0" VerticalAlignment="Top" Height="37" Width="162"/>
-        <Label x:Name="label_returning_date" Content="Returning Date" HorizontalAlignment="Left" Margin="370,79,0,0" VerticalAlignment="Top" Height="37" Width="161"/>
-        <Label x:Name="label_rezervation_date" Content="Rezervation Date" HorizontalAlignment="Left" Margin="537,37,0,0" VerticalAlignment="Top" Height="37" Width="164"/>
-        <DatePicker x:Name="datepicker_returningdate" HorizontalAlignment="Left" Margin="536,79,0,0" VerticalAlignment="Top" Height="37" Width="165"/>
-        <Button x:Name="button_return" Content="Return" HorizontalAlignment="Left" Margin="706,55,0,0" VerticalAlignment="Top" Width="75" Click="button_return_Click"/>
+        <Button Style="{DynamicResource RoundedButtonStyle}"  x:Name="button_search_studentbyId" Content="Search" HorizontalAlignment="Left" Margin="33,79,0,0" VerticalAlignment="Top" Width="136" Height="39" Click="button_search_studentbyId_Click" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White"/>
+        <DataGrid x:Name="datagrid_rezervation" HorizontalAlignment="Left" Height="265" Margin="10,145,0,0" VerticalAlignment="Top" Width="774" SelectedCellsChanged="datagrid_rezervation_SelectedCellsChanged" Background="{x:Null}" BorderBrush="{x:Null}"/>
+        <Label x:Name="label_title" Content="" HorizontalAlignment="Left" Margin="228,37,0,0" VerticalAlignment="Top" Height="37" Width="376" FontSize="18" FontWeight="Bold" Foreground="White"/>
+        <Label x:Name="label_returning_date" Content="Returning Date" HorizontalAlignment="Left" Margin="228,74,0,0" VerticalAlignment="Top" Height="37" Width="161" FontSize="18" FontWeight="Bold" Foreground="White"/>
+        <Label x:Name="label_rezervation_date" Content="Rezervation Date" HorizontalAlignment="Left" Margin="623,37,0,0" VerticalAlignment="Top" Height="37" Width="161" FontSize="16" Foreground="White" FontWeight="Bold"/>
+        <DatePicker x:Name="datepicker_returningdate" HorizontalAlignment="Left" Margin="389,79,0,0" VerticalAlignment="Top" Height="37" Width="165" BorderBrush="{x:Null}"/>
+        <Button Style="{DynamicResource RoundedButtonStyle}"  x:Name="button_return" Content="Return" HorizontalAlignment="Left" Margin="576,79,0,0" VerticalAlignment="Top" Width="208" Click="button_return_Click" Height="57" FontSize="36" FontWeight="Bold" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White"/>
 
     </Grid>
 </Window>

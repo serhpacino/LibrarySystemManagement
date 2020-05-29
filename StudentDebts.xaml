@@ -5,12 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibrarySystemManagement"
         mc:Ignorable="d"
-        Title="StudentDebts" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="StudentDebts" Height="450" Width="800" Loaded="Window_Loaded" MinWidth="800" MinHeight="450" MaxWidth="800" MaxHeight="450">
     <Grid>
-        <DataGrid x:Name="datagrid_bookinfo" HorizontalAlignment="Left" Height="169" Margin="10,35,0,0" VerticalAlignment="Top" Width="774" SelectedCellsChanged="datagrid_bookinfo_SelectedCellsChanged"/>
-        <DataGrid x:Name="datagrid_debts" HorizontalAlignment="Left" Height="169" Margin="10,241,0,0" VerticalAlignment="Top" Width="774"/>
-        <Label x:Name="label_bookinfo" Content="Book Info" HorizontalAlignment="Left" Margin="10,1,0,0" VerticalAlignment="Top" Width="125" FontSize="20" FontFamily="Arial Black"/>
-        <Label Content="Debts" HorizontalAlignment="Left" Margin="10,0,0,179" VerticalAlignment="Bottom" Width="109" FontSize="20" FontFamily="Arial Black"/>
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/LibrarySystemManagement;component/images/background_image_3.jpg"/>
+            </Grid.Background>
+        </Grid>
+        <DataGrid x:Name="datagrid_bookinfo" HorizontalAlignment="Left" Height="169" Margin="10,35,0,0" VerticalAlignment="Top" Width="774" SelectedCellsChanged="datagrid_bookinfo_SelectedCellsChanged" Background="{x:Null}" BorderBrush="{x:Null}"/>
+        <DataGrid x:Name="datagrid_debts" HorizontalAlignment="Left" Height="169" Margin="10,241,0,0" VerticalAlignment="Top" Width="774" Background="{x:Null}" BorderBrush="{x:Null}"/>
+        <Label x:Name="label_bookinfo" Content="Book Info" HorizontalAlignment="Left" Margin="10,1,0,0" VerticalAlignment="Top" Width="125" FontSize="20" FontFamily="Arial Black" Foreground="White"/>
+        <Label Content="Debts" HorizontalAlignment="Left" Margin="10,0,0,179" VerticalAlignment="Bottom" Width="109" FontSize="20" FontFamily="Arial Black" Foreground="White"/>
 
     </Grid>
 </Window>

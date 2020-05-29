@@ -5,30 +5,90 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibrarySystemManagement"
         mc:Ignorable="d"
-        Title="UserWindow" Height="450" Width="800">
+        Title="UserWindow" Height="450" Width="800" MaxWidth="800" MaxHeight="450" MinWidth="800" MinHeight="450">
     <Grid MinWidth="793.6" MinHeight="420">
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/LibrarySystemManagement;component/images/background_image_2.jpg"/>
+        </Grid.Background>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="669*"/>
             <ColumnDefinition Width="124*"/>
         </Grid.ColumnDefinitions>
-        <Menu Height="25" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="0,0,-0.4,0">
-            <MenuItem Header="Book">
-                <MenuItem Header="Add New" Click="MenuItem_Click"></MenuItem>
-                <MenuItem Header="View Book" Click="MenuItem_Click_1"></MenuItem>
+        <Menu Height="25" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="0,0,-0.4,0" Background="{x:Null}" Foreground="White" FontSize="16" FontWeight="Bold">
+            <MenuItem Header="Book" Width="60" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
+                <MenuItem Header="Add New" Click="MenuItem_Click" BorderBrush="{x:Null}" Foreground="White">
+                    <MenuItem.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFB50FFA" Offset="0"/>
+                            <GradientStop Color="#FF110BFF" Offset="1"/>
+                        </LinearGradientBrush>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Header="View Book" Click="MenuItem_Click_1" BorderBrush="{x:Null}">
+                    <MenuItem.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="#FF2707F9" Offset="0"/>
+                            <GradientStop Color="#FFB50FFA" Offset="1"/>
+                        </LinearGradientBrush>
+                    </MenuItem.Background>
+                </MenuItem>
             </MenuItem>
-            <MenuItem Header="Student" Width="52" RenderTransformOrigin="0.5,0.5">
-                <MenuItem Name="registerStudent" Header="Register A Student" Click="MenuItem_Click_2" />
-                <MenuItem Name="viewStudent" Header="View A Student" Click="MenuItem_Click_3" />
+            <MenuItem Header="Student" Width="72" RenderTransformOrigin="0.5,0.5" Foreground="White">
+                <MenuItem Name="registerStudent" Header="Register A Student" Click="MenuItem_Click_2" Foreground="White" >
+                    <MenuItem.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF095CFF" Offset="0"/>
+                            <GradientStop Color="#FF840EFF" Offset="1"/>
+                        </LinearGradientBrush>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Name="viewStudent" Header="View A Student" Click="MenuItem_Click_3" Foreground="White" >
+                    <MenuItem.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFBF08FF" Offset="0"/>
+                            <GradientStop Color="#FF080BFF" Offset="1"/>
+                        </LinearGradientBrush>
+                    </MenuItem.Background>
+                </MenuItem>
             </MenuItem>
-            <MenuItem Header="Order" Width="67" >
-                <MenuItem Name ="lendingBook" Header="Lending a Book" Click="MenuItem_Click_4"></MenuItem>
-                <MenuItem Name ="returningBook" Header="Return a Book" Click="returningBook_Click"></MenuItem>
+            <MenuItem Header="Order" Width="61" Foreground="White" >
+                <MenuItem Name ="lendingBook" Header="Lending a Book" Click="MenuItem_Click_4" Foreground="White">
+                    <MenuItem.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF00DFFF" Offset="0"/>
+                            <GradientStop Color="#FFF400FF" Offset="1"/>
+                        </LinearGradientBrush>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Name ="returningBook" Header="Return a Book" Click="returningBook_Click" Foreground="White">
+                    <MenuItem.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF00D6FF" Offset="0"/>
+                            <GradientStop Color="#FFF400FF" Offset="1"/>
+                        </LinearGradientBrush>
+                    </MenuItem.Background>
+                </MenuItem>
             </MenuItem>
-            <MenuItem Header="Debts">
-                <MenuItem Name = "studentDebts" Header="Checking Students Debs" Click="studentDebts_Click"></MenuItem>
+            <MenuItem Header="Debts" Width="67" Foreground="White">
+                <MenuItem x:Name = "studentDebts" Header="Checking Students Debts" Click="studentDebts_Click" Foreground="White">
+                    <MenuItem.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF00E8FF" Offset="0"/>
+                            <GradientStop Color="#FFF400FF" Offset="1"/>
+                        </LinearGradientBrush>
+                    </MenuItem.Background>
+                </MenuItem>
             </MenuItem>
         </Menu>
-        
-        
+        <TextBlock HorizontalAlignment="Left" Margin="436,385,0,0" TextWrapping="Wrap" Text="This Project Created by Serhii Chernov" VerticalAlignment="Top" Height="25" Width="348" FontSize="18" Grid.ColumnSpan="2" FontWeight="Bold" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Height="66" Margin="10,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="571" FontSize="48" FontFamily="Segoe UI Semibold" Text="The Library Management" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,101,0,0" TextWrapping="Wrap" Text="here you can use all the functionality of the program" VerticalAlignment="Top" Width="546" Height="23" FontSize="18" FontWeight="Bold" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,148,0,0" TextWrapping="Wrap" Text="In the first tab, you can add books (Add New), view and edit information about the book (View Book)" VerticalAlignment="Top" Width="721" FontSize="16" Grid.ColumnSpan="2" Foreground="White" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,191,0,0" TextWrapping="Wrap" Text="In the second tab, you can register a student (Register A Student) and view student information (View A Student)." VerticalAlignment="Top" Grid.ColumnSpan="2" Width="707" FontSize="16" Foreground="White" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,238,0,0" TextWrapping="Wrap" Text="In the Order tab, you can give books to students (Lending a Book) and confirm information about the return of books from the student (Return a Book)." VerticalAlignment="Top" Grid.ColumnSpan="2" Width="707" FontSize="16" Foreground="White" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,286,0,0" TextWrapping="Wrap" Text="In the last tab Debts you can see who took which book (Checking Students Debts)." VerticalAlignment="Top" Grid.ColumnSpan="2" Width="707" FontSize="16" Foreground="White" FontWeight="Bold"/>
+
     </Grid>
 </Window>

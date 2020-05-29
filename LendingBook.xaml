@@ -7,19 +7,24 @@
         mc:Ignorable="d"
         Title="LendingBook" Height="450" Width="800" Loaded="lending_book_Load">
     <Grid>
-        <Button x:Name="button_search_by_id" Content="Search" HorizontalAlignment="Left" Margin="239,33,0,0" VerticalAlignment="Top" Width="103" Height="26" Click="button_search_by_id_Click"/>
-        <TextBox x:Name="textbox_studentId" HorizontalAlignment="Left" Height="26" Margin="37,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" FontSize="16"/>
-        <Label x:Name="label_student_semestr" Content="Semestr" HorizontalAlignment="Left" Margin="37,275,0,0" VerticalAlignment="Top" FontSize="20" Width="305"/>
-        <Label x:Name="label_student_firstname" Content="First Name" HorizontalAlignment="Left" Margin="37,92,0,0" VerticalAlignment="Top" FontSize="48" FontFamily="Yu Gothic UI Semibold" Width="305"/>
-        <Label x:Name="label_student_lastname" Content="Last Name" HorizontalAlignment="Left" Margin="37,159,0,0" VerticalAlignment="Top" FontSize="48" FontFamily="Yu Gothic UI Semibold" Width="305"/>
-        <Label x:Name="label_student_email" Content="Email" HorizontalAlignment="Left" Margin="37,238,0,0" VerticalAlignment="Top" FontSize="20" Width="305"/>
-        <Label x:Name="label_student_specialization" Content="Specialization" HorizontalAlignment="Left" Margin="37,312,0,0" VerticalAlignment="Top" FontSize="20" Width="305"/>
-        <Label Content="Find a Student by ID:" HorizontalAlignment="Left" Margin="37,1,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-        <Button x:Name="button_book_lending" Content="Complete a Request" HorizontalAlignment="Left" Margin="517,214,0,0" VerticalAlignment="Top" Width="241" Height="61" FontSize="18" FontWeight="Bold" Click="button_book_lending_Click"/>
-        <TextBox x:Name="textbox_bookname" HorizontalAlignment="Left" Height="30" Margin="517,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" FontSize="18" KeyUp="textbox_bookname_KeyUp" KeyDown="textbox_bookname_KeyDown"/>
-        <Label Content="Book Name:" HorizontalAlignment="Left" Margin="393,136,0,0" VerticalAlignment="Top" Height="30" Width="124" FontWeight="Bold" FontSize="16"/>
-        <DatePicker x:Name="datepicker_orderdate" HorizontalAlignment="Left" Margin="517,71,0,0" VerticalAlignment="Top" Height="37" Width="241" FontSize="16" />
-        <Label Content="Lending Date:" HorizontalAlignment="Left" Margin="393,78,0,0" VerticalAlignment="Top" Height="30" Width="124" FontWeight="Bold" FontSize="16"/>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/LibrarySystemManagement;component/images/background_image_3.jpg"/>
+        </Grid.Background>
+
+        <Button Style="{DynamicResource RoundedButtonStyle}"  x:Name="button_search_by_id" Content="Search" HorizontalAlignment="Left" Margin="227,33,0,0" VerticalAlignment="Top" Width="133" Height="38" Click="button_search_by_id_Click" FontWeight="Bold" FontSize="18" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
+        <TextBox x:Name="textbox_studentId" HorizontalAlignment="Left" Height="26" Margin="37,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" FontSize="16" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}"/>
+        <Label x:Name="label_student_semestr" Content="Semestr" HorizontalAlignment="Left" Margin="37,275,0,0" VerticalAlignment="Top" FontSize="20" Width="305" Foreground="White"/>
+        <Label x:Name="label_student_firstname" Content="First Name" HorizontalAlignment="Left" Margin="37,92,0,0" VerticalAlignment="Top" FontSize="48" FontFamily="Yu Gothic UI Semibold" Width="305" Foreground="White"/>
+        <Label x:Name="label_student_lastname" Content="Last Name" HorizontalAlignment="Left" Margin="37,159,0,0" VerticalAlignment="Top" FontSize="48" FontFamily="Yu Gothic UI Semibold" Width="305" Foreground="White"/>
+        <Label x:Name="label_student_email" Content="Email" HorizontalAlignment="Left" Margin="37,238,0,0" VerticalAlignment="Top" FontSize="20" Width="305" Foreground="White"/>
+        <Label x:Name="label_student_specialization" Content="Specialization" HorizontalAlignment="Left" Margin="37,312,0,0" VerticalAlignment="Top" FontSize="20" Width="305" Foreground="White"/>
+        <Label Content="Find a Student by ID:" HorizontalAlignment="Left" Margin="37,1,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="White"/>
+        <Button Style="{DynamicResource RoundedButtonStyle}"  x:Name="button_book_lending" Content="Complete a Request" HorizontalAlignment="Left" Margin="393,342,0,0" VerticalAlignment="Top" Width="391" Height="68" FontSize="36" FontWeight="Bold" Click="button_book_lending_Click" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}"/>
+        <TextBox x:Name="textbox_bookname" HorizontalAlignment="Left" Height="30" Margin="517,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" FontSize="18" KeyUp="textbox_bookname_KeyUp" KeyDown="textbox_bookname_KeyDown" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}"/>
+        <Label Content="Book Name:" HorizontalAlignment="Left" Margin="393,136,0,0" VerticalAlignment="Top" Height="30" Width="124" FontWeight="Bold" FontSize="16" Foreground="White"/>
+        <DatePicker x:Name="datepicker_orderdate" HorizontalAlignment="Left" Margin="517,71,0,0" VerticalAlignment="Top" Height="37" Width="241" FontSize="16" BorderBrush="{x:Null}" />
+        <Label Content="Lending Date:" HorizontalAlignment="Left" Margin="393,78,0,0" VerticalAlignment="Top" Height="30" Width="124" FontWeight="Bold" FontSize="16" Foreground="White"/>
         <ListBox x:Name="listbox_bookname" HorizontalAlignment="Left" Height="141" Margin="517,171,0,0" VerticalAlignment="Top" Width="241" FontSize="18" Visibility="Hidden" KeyDown="listbox_bookname_KeyDown" MouseDoubleClick="listbox_bookname_MouseDoubleClick"/>
 
     </Grid>

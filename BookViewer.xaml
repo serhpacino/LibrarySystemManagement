@@ -5,12 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibrarySystemManagement"
         mc:Ignorable="d"
-        Title="BookViewer" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="BookViewer" Height="450" Width="800" Loaded="Window_Loaded" MinWidth="800" MinHeight="450" MaxWidth="800" MaxHeight="450">
     <Grid MinWidth="793.6" MinHeight="420">
-        <DataGrid x:Name="dataGridBookView" HorizontalAlignment="Left" Height="227" Margin="294,183,0,0" VerticalAlignment="Top" Width="490" SelectedCellsChanged="dataGridBookView_SelectedCellsChanged"/>
-        <TextBox x:Name="textbox_search" HorizontalAlignment="Left" Height="33" Margin="10,34,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="227" FontSize="22" KeyUp="textbox_search_KeyUp"/>
-        <Button Content="Search" HorizontalAlignment="Left" Margin="69,77,0,0" VerticalAlignment="Top" Width="98" Height="33" FontSize="16" Click="Button_Click"/>
-        <Label Content="Enter a title of the book:" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Top" FontSize="16" Width="227"/>
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/LibrarySystemManagement;component/images/background_image_3.jpg"/>
+            </Grid.Background>
+        </Grid>
+        <DataGrid x:Name="dataGridBookView" HorizontalAlignment="Left" Height="227" Margin="294,183,0,0" VerticalAlignment="Top" Width="490" SelectedCellsChanged="dataGridBookView_SelectedCellsChanged" BorderBrush="{x:Null}" Background="{x:Null}"/>
+        <TextBox x:Name="textbox_search" HorizontalAlignment="Left" Height="33" Margin="10,34,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="227" FontSize="22" KeyUp="textbox_search_KeyUp" Foreground="White" BorderBrush="{x:Null}" Background="{x:Null}"/>
+        <Button Style="{DynamicResource RoundedButtonStyle}"  Content="Search" HorizontalAlignment="Left" Margin="69,77,0,0" VerticalAlignment="Top" Width="98" Height="40" FontSize="16" Click="Button_Click" Foreground="White"/>
+        <Label Content="Enter a title of the book:" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Top" FontSize="16" Width="227" FontWeight="Bold" Foreground="White"/>
         <Grid x:Name="grid_updateinfo" HorizontalAlignment="Left" Height="168" Margin="270,10,0,0" VerticalAlignment="Top" Width="514" Visibility="Hidden">
             <Label Content="Title" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
             <Label Content="Author" HorizontalAlignment="Left" Margin="0,59,0,0" VerticalAlignment="Top"/>
@@ -24,7 +29,7 @@
             <TextBox x:Name="textbox_amount" HorizontalAlignment="Left" Height="23" Margin="290,83,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
             <TextBox x:Name="textbox_publisher" HorizontalAlignment="Left" Height="23" Margin="147,35,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
             <TextBox x:Name="textbox_price" HorizontalAlignment="Left" Height="23" Margin="290,35,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-            <Button Content="Update" HorizontalAlignment="Left" Margin="429,37,0,0" VerticalAlignment="Top" Width="75" Height="48" Click="Button_Click_1"/>
+            <Button Style="{DynamicResource RoundedButtonStyle}"  Content="Update" HorizontalAlignment="Left" Margin="429,37,0,0" VerticalAlignment="Top" Width="75" Height="48" Click="Button_Click_1" Foreground="White"/>
             <DatePicker x:Name="textbox_purchasedate" HorizontalAlignment="Left" Margin="147,84,0,0" VerticalAlignment="Top" Width="120" >
                
             </DatePicker>

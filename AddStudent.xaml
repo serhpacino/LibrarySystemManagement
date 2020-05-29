@@ -5,16 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibrarySystemManagement"
         mc:Ignorable="d"
-        Title="AddStudent" Height="450" Width="800">
+        Title="AddStudent" Height="450" Width="800" MinWidth="800" MinHeight="450" MaxWidth="800" MaxHeight="450">
     <Grid RenderTransformOrigin="0.634,0.328">
-        <Label Content="First Name:" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top" FontSize="18" Height="49" Width="139"/>
-        <Label Content="Last Name:" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" FontSize="18" Height="47" Width="137"/>
-        <Label Content="Email:" HorizontalAlignment="Left" Margin="10,122,0,0" VerticalAlignment="Top" FontSize="18" Height="33" Width="79"/>
-        <Label Content="Password:" HorizontalAlignment="Left" Margin="10,176,0,0" VerticalAlignment="Top" Width="97" FontSize="18" Height="44"/>
-        <Label Content="Phone Number" HorizontalAlignment="Left" Margin="10,220,0,0" VerticalAlignment="Top" FontSize="18" Height="45" Width="150"/>
-        <Label Content="Semestr" HorizontalAlignment="Left" Margin="10,265,0,0" VerticalAlignment="Top" FontSize="18" Height="44" Width="103"/>
-        <Label Content="Specialization" HorizontalAlignment="Left" Margin="10,309,0,0" VerticalAlignment="Top" FontSize="18" Height="49" Width="166"/>
-        <ComboBox Name="combobox_Specialization" HorizontalAlignment="Left" Margin="160,323,0,0" VerticalAlignment="Top" Width="120">
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/LibrarySystemManagement;component/images/background_image_3.jpg"/>
+            </Grid.Background>
+        </Grid>
+        <Label Content="First Name:" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top" FontSize="16" Height="49" Width="139" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Last Name:" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" FontSize="16" Height="47" Width="137" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="10,122,0,0" VerticalAlignment="Top" FontSize="16" Height="33" Width="79" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="10,176,0,0" VerticalAlignment="Top" Width="118" FontSize="16" Height="44" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Phone Number" HorizontalAlignment="Left" Margin="10,220,0,0" VerticalAlignment="Top" FontSize="16" Height="45" Width="145" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Semestr" HorizontalAlignment="Left" Margin="10,265,0,0" VerticalAlignment="Top" FontSize="16" Height="44" Width="103" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Specialization" HorizontalAlignment="Left" Margin="10,309,0,0" VerticalAlignment="Top" FontSize="16" Height="49" Width="166" Foreground="White" FontWeight="Bold"/>
+        <ComboBox Name="combobox_Specialization" HorizontalAlignment="Left" Margin="160,323,0,0" VerticalAlignment="Top" Width="120" TabIndex="0">
             <ComboBoxItem Content="Programming" TabIndex="1" ></ComboBoxItem>
             <ComboBoxItem Content="Management" TabIndex="2" ></ComboBoxItem>
             <ComboBoxItem Content="Philology" TabIndex="3" ></ComboBoxItem>
@@ -34,7 +39,7 @@
         <TextBox Name="textbox_Email" HorizontalAlignment="Left" Height="23" Margin="160,132,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="182"/>
         <TextBox Name="textbox_Password" HorizontalAlignment="Left" Height="23" Margin="160,186,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="182"/>
         <TextBox Name="textbox_PhoneNumber" HorizontalAlignment="Left" Height="23" Margin="160,230,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="182"/>
-        <Button Name="button_Register" Content="Register a student" HorizontalAlignment="Left" Margin="671,348,0,0" VerticalAlignment="Top" Width="113" Height="44" Click="button_Register_Click"/>
+        <Button Style="{DynamicResource RoundedButtonStyle}"  Name="button_Register" Content="Register a student" HorizontalAlignment="Left" Margin="337,309,0,0" VerticalAlignment="Top" Width="447" Height="83" Click="button_Register_Click" FontSize="48" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
 
     </Grid>
 </Window>

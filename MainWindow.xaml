@@ -5,18 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibrarySystemManagement"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="800" Loaded="Window_Loaded">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="81*"/>
-            <ColumnDefinition Width="316*"/>
-        </Grid.ColumnDefinitions>
-        <Label Content="User Name" Grid.Column="1" HorizontalAlignment="Left" Margin="298.4,84,0,0" VerticalAlignment="Top" Height="37" Width="207" FontSize="20"/>
-        <Label Content="Password" Grid.Column="1" HorizontalAlignment="Left" Margin="298.4,178,0,0" VerticalAlignment="Top" Width="207" FontSize="20"/>
-        <Label Content="Logging Into Library App" HorizontalAlignment="Left" Margin="45.4,24,0,0" VerticalAlignment="Top" Width="413" Height="60" FontSize="36" Grid.Column="1"/>
-        <TextBox x:Name="textbox1" Grid.Column="1" HorizontalAlignment="Left" Height="31" Margin="298.4,126,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="207"/>
-        <TextBox x:Name="textbox2" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="298.4,215,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="207"/>
-        <Button Content="Sign In" Grid.Column="1" HorizontalAlignment="Left" Margin="347.4,276,0,0" VerticalAlignment="Top" Width="111" Height="45" FontSize="20" Click="Button_Click"/>
+        Title="Login" Height="450" Width="800" Loaded="Window_Loaded" MinWidth="800" MinHeight="450" MaxWidth="800" MaxHeight="450">
+    <Grid Margin="0,0,-6.4,0" HorizontalAlignment="Center" Width="800">
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/LibrarySystemManagement;component/images/background_image_2.jpg"/>
+        </Grid.Background>
+
+        <Label Content="User Name" Margin="117,128,132.8,0" Height="37" Width="207" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
+        <Label Content="Password" Margin="117,206,132.8,0" Width="207" FontSize="20" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top" Height="37" FontWeight="Bold" Foreground="White"/>
+        <Label Content="Logging Into Library App" HorizontalAlignment="Center" Margin="182,24,175,0" VerticalAlignment="Top" Width="443" Height="60" FontSize="36" FontWeight="Bold" Foreground="White"/>
+        <TextBox x:Name="textbox1" HorizontalAlignment="Center" Height="31" Margin="118,170,131.8,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="207" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
+        <TextBox x:Name="textbox2" HorizontalAlignment="Center" Height="29" Margin="117,248,132.8,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="207" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
+        <Button Style="{DynamicResource RoundedButtonStyle}" Content="Sign In" HorizontalAlignment="Center" Margin="163,310,182.8,0" VerticalAlignment="Top" Width="111" Height="45" FontSize="22" Click="Button_Click" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold" Cursor="Arrow" Background="#FF3B2399"/>
 
     </Grid>
 </Window>

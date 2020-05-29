@@ -5,9 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibrarySystemManagement"
         mc:Ignorable="d"
-        Title="ViewStudent" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="ViewStudent" Height="450" Width="800" Loaded="Window_Loaded" MinWidth="800" MinHeight="450" MaxWidth="800" MaxHeight="450">
     <Grid>
-        <DataGrid Name="datagrid_studentviewer" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="774" SelectedCellsChanged="datagrid_studentviewer_SelectedCellsChanged">
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/LibrarySystemManagement;component/images/background_image_3.jpg"/>
+            </Grid.Background>
+        </Grid>
+        <DataGrid Name="datagrid_studentviewer" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="774" SelectedCellsChanged="datagrid_studentviewer_SelectedCellsChanged" Background="{x:Null}" BorderBrush="{x:Null}">
 
 
         </DataGrid>
