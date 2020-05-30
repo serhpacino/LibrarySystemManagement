@@ -58,14 +58,15 @@ namespace LibrarySystemManagement
                     MessageBox.Show("Enter a password");
                     textbox_Password.Focus();
                 }
-                else if (combobox_Specialization.TabIndex == 0)
+                else if (combobox_Specialization.Text.Length == 0)
                 {
                     MessageBox.Show("Enter a specialization");
-                    combobox_Specialization.Focus();
+                    
+                    combobox_Specialization.Text = "";
                 }
                 else
                 {
-                    cmd.CommandText = "insert into Student values('" + textbox_FirstName.Text + "','" + textbox_LastName.Text + "','" + textbox_Email.Text + "','" + textbox_Password.Text + "','" + textbox_PhoneNumber.Text + "','" + combobox_Semestr.Text + "'," + combobox_Semestr.TabIndex + ")";
+                    cmd.CommandText = "insert into Student values('" + textbox_FirstName.Text + "','" + textbox_LastName.Text + "','" + textbox_Email.Text + "','" + textbox_Password.Text + "','" + textbox_PhoneNumber.Text + "','" + combobox_Semestr.Text + "'," + combobox_Specialization.SelectedIndex + ")";
                     cmd.ExecuteNonQuery();
                     c.Close();
                     MessageBox.Show("Student " + textbox_FirstName.Text + "  " + textbox_LastName.Text + " was added successfully");
@@ -75,12 +76,14 @@ namespace LibrarySystemManagement
                     textbox_Password.Text = "";
                     textbox_PhoneNumber.Text = "";
                     combobox_Semestr.Text = "";
+                    combobox_Specialization.Text = "";
                 }
                 c.Close();
             }
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message);
+                
             }
         }
     }
