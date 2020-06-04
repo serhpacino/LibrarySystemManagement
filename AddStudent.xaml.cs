@@ -66,7 +66,7 @@ namespace LibrarySystemManagement
                 }
                 else
                 {
-                    cmd.CommandText = "insert into Student values('" + textbox_FirstName.Text + "','" + textbox_LastName.Text + "','" + textbox_Email.Text + "','" + textbox_Password.Text + "','" + textbox_PhoneNumber.Text + "','" + combobox_Semestr.Text + "'," + combobox_Specialization.SelectedIndex + ")";
+                    cmd.CommandText = "insert into Student values('" + textbox_FirstName.Text + "','" + textbox_LastName.Text + "','" + textbox_Email.Text + "','" + textbox_Password.Text + "','" + textbox_PhoneNumber.Text + "','" + combobox_Semestr.Text + "'," + combobox_Specialization.Items.Count + ")";
                     cmd.ExecuteNonQuery();
                     c.Close();
                     MessageBox.Show("Student " + textbox_FirstName.Text + "  " + textbox_LastName.Text + " was added successfully");
